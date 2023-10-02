@@ -22,6 +22,13 @@ class Signactivity : AppCompatActivity() {
             signUp()
         }
 
+        val skip: TextView = findViewById(R.id.skipbtn)
+        skip.setOnClickListener {
+
+            val i = Intent(this@Signactivity, MainActivity::class.java)
+            startActivity(i)
+        }
+
         val toLogin: TextView =findViewById(R.id.toLogin)
         toLogin.setOnClickListener {
             val intent= Intent(this, Logactivity::class.java)
